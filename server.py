@@ -5,10 +5,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 def get_db_connection():
-    conn = psycopg2.connect(host='db',
+    conn = psycopg2.connect(host='dpg-cqqvnb5svqrc73fo7ad0-a.frankfurt-postgres.render.com',
                             database='movies',
                             user='postgres',
-                            password='Postgres2023')
+                            password='1234')
     return conn
 
 
