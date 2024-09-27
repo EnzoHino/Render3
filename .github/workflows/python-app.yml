@@ -37,4 +37,10 @@ jobs:
         # ID of the service to deploy
         service-id: srv-crc4v656l47c73db9l90
         api-key: rnd_pbYwvcRFwpyLJHqMgffGpFl5HbR8
-          
+
+    - name: Deploy no EC2 - AWS
+      run: |
+        echo "Conectando no EC2"
+        echo "${{secrets.AWS_PEM}}" > private_key && chmod 600 private_key 
+        ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-18-204-100-152.compute-1.amazonaws.com "
+            cd gitActionEx3/;git pull;./IniciarApp.sh"
