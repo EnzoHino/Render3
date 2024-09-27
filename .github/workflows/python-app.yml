@@ -28,16 +28,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-    - name: Render Deploy Action
-      uses: johnbeynon/render-deploy-action@v0.0.8
-      with:
-        # ID of the service to deploy
-        service-id: srv-crc4v656l47c73db9l90
-        api-key: rnd_pbYwvcRFwpyLJHqMgffGpFl5HbR8
-
+        
     - name: Deploy no EC2 - AWS
       run: |
         echo "Conectando no EC2"
