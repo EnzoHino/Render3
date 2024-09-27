@@ -4,8 +4,6 @@
 name: Pipeline Flask Rendee
 
 on:
-  commit:
-    branches: [ "main" ]
   push:
     branches: [ "main" ]
   pull_request:
