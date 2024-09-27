@@ -33,4 +33,4 @@ jobs:
         echo "Conectando no EC2"
         echo "${{secrets.AWS_PEM}}" > private_key && chmod 600 private_key 
         ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-3-230-98-240.compute-1.amazonaws.com "
-            cd Render3/;git pull;./IniciarApp.sh"
+            cd Render3/;git pull;./iniciarApp.sh"
